@@ -1,22 +1,20 @@
 
 import pool from "../config/db.js"
 import argon2 from "argon2"
+import { ErrorExceptions } from "../utils/error.js"
 
 
 class StaffServis{
     constructor(){}
 
-    async createStaff(req){
+    async createStaff(req,res,next){
         
         const { fullname, phone, password, role } = req.body
 
         let existStaff = await pool.query("select * from staff where phone=$1", [phone])
 
         if(existStaff.rows.length){
-            return {
-                status:409,
-                message:"user already axist with phone"
-            }
+            return next(new ErrorExceptions(409,"User already exist"))
         }
 
         const hashPassword = await argon2.hash(password)
@@ -39,16 +37,14 @@ class StaffServis{
         }
     }
 
-    async deleteStaff(req){
+    async deleteStaff(req,res,next){
         let { userId } = req.params
 
         let existStaff = await pool.query("select * from staff where id=$1", [userId])
 
         if(!existStaff.rows.length){
-            return {
-                status:404,
-                message:" user not found with this id"
-            }
+            return next(new ErrorExceptions(404,"user not found with this id"))
+            
         }  
 
         await pool.query("update staff set status='inactive' where id=$1", [userId])

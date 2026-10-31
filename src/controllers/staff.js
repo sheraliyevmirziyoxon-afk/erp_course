@@ -10,14 +10,20 @@ class StaffController {
 
     }
 
-    async createStaff(req,res){
-        let resData = await staffServis.createStaff(req)
-        return res.status(resData.status).json(resData)
+    async createStaff(req,res,next){
+        let resData = await staffServis.createStaff(req,res,next)
+        if(resData){
+            return res.status(resData.status).json(resData)
+        }
     }
 
-    async deleteStaff(req, res){
-        let resData = await staffServis.deleteStaff(req)
-        return res.status(resData.status).json(resData)
+    async deleteStaff(req, res, next){
+        let resData = await staffServis.deleteStaff(req,res,next)
+        // return res.status(resData.status).json(resData)
+
+        if(resData){
+            return res.status(resData.status).json(resData)
+        }
 
     }
 }
