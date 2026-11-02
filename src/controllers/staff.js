@@ -4,8 +4,8 @@ class StaffController {
     constructor(){}
 
  
-    async getAllStaff(req, res){
-        let resData = await staffServis.getStaffs()
+    async getAllStaff(req, res, next){
+        let resData = await staffServis.getStaffs(res, req,next)
         return res.status(resData.status).json(resData)
 
     }

@@ -1,0 +1,4 @@
+[10/31/2026, 8:35:48 PM]--POST--/api/v1/auth/login--Interval Server Error
+[10/31/2026, 8:36:52 PM]--POST--/api/v1/auth/login--Error: Interval Server Error
+[10/31/2026, 8:40:34 PM]--POST--/api/v1/auth/login--Interval Server Error
+[10/31/2026, 8:44:08 PM]--POST--/api/v1/auth/login--Interval Server Error
