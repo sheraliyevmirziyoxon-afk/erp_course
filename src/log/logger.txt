@@ -2,3 +2,19 @@
 [10/31/2026, 8:36:52 PM]--POST--/api/v1/auth/login--Error: Interval Server Error
 [10/31/2026, 8:40:34 PM]--POST--/api/v1/auth/login--Interval Server Error
 [10/31/2026, 8:44:08 PM]--POST--/api/v1/auth/login--Interval Server Error
+[11/3/2026, 7:34:08 PM]--POST--/api/v1/students--studentService.createStudent is not a function
+[11/3/2026, 7:40:39 PM]--POST--/api/v1/students--studentService.createStudent is not a function
+[11/3/2026, 7:43:07 PM]--POST--/api/v1/students--studentService.createStudent is not a function
+[11/3/2026, 7:53:39 PM]--POST--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 7:55:02 PM]--POST--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 8:14:56 PM]--GET--/api/v1/students--TypeError: Cannot read properties of undefined (reading 'role')
+[11/3/2026, 8:30:18 PM]--POST--/api/v1/auth/login--Interval Server Error
+[11/3/2026, 8:35:02 PM]--GET--/api/v1/students--TypeError: Cannot destructure property 'fullname' of 'req.body' as it is undefined.
+[11/3/2026, 8:38:06 PM]--GET--/api/v1/students--TypeError: Cannot destructure property 'fullname' of 'req.body' as it is undefined.
+[11/3/2026, 8:38:23 PM]--GET--/api/v1/students--error: null value in column "fullname" of relation "students" violates not-null constraint
+[11/3/2026, 8:43:11 PM]--GET--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 8:43:16 PM]--GET--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 8:43:45 PM]--GET--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 8:47:06 PM]--GET--/api/v1/students--error: duplicate key value violates unique constraint "students_phone_key"
+[11/3/2026, 8:47:25 PM]--GET--/api/v1/students--TypeError: Cannot destructure property 'fullname' of 'req.body' as it is undefined.
+[11/3/2026, 8:52:09 PM]--GET--/api/v1/students--syntax error at or near "phone"

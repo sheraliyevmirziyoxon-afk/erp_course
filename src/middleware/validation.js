@@ -9,5 +9,14 @@ export default {
         }
 
         return next()
+    },
+
+    createStudent : (req, res, next) => {
+        let { error } = schema.studentSchema.validate(req.body)
+        if(error){
+            return next(new ErrorExceptions(400,error.message))
+        }
+
+        return next()
     }
 }
